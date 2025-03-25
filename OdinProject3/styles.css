@@ -1,0 +1,30 @@
+
+
+
+.header {
+    background-color: aliceblue;
+    color: black;
+    text-align: center;
+}
+
+.main {
+
+}
+
+.scoreboard {
+    text-align: center;
+    height: auto;
+    width: 500px;
+    margin-top :300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background-color: lightblue;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
