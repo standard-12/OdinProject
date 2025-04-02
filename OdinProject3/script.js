@@ -14,85 +14,60 @@ function getRandInteger(min,max) {
     return Math.floor(Math.random()*(max-min))+min;
 }
 
-// function getHumanChoice() {
-//     return prompt("Enter Your Choice").toLowerCase()
-    
-// }
 
-// function PlayRound(HumanChoice,ComputerChoice){
-//     if (HumanChoice===ComputerChoice){
-//         console.log("Ohh it was a draw")
-//         return
-//     }
-//     else if(HumanChoice==="rock" && ComputerChoice === "scissor"){
-//         HumanScore++;
-//         console.log("You Won Rock beats scissor")
-//     }
-//     else if(HumanChoice==="paper" && ComputerChoice === "rock"){
-//         HumanScore++;
-//         console.log("You Won Paper beats Rock")
-//     }
-//     else if(HumanChoice==="scissor" && ComputerChoice==="paper"){
-//         HumanScore++;
-//         console.log("You Won Scissor beats Paper")
-//     }
-//     else{ 
-//         ComputerScore++;
-//         console.log("You Lose",ComputerChoice," beats ",HumanChoice)
-//     }
-//     return
-// }
-
-
-// let HumanScore=0;
-// let ComputerScore=0;
-
-// while(HumanScore<3 && ComputerScore<3){
-//     let ComputerChoice=getComputerChoice();
-//     console.log("Comp Choice is :",ComputerChoice)
-//     let HumanChoice=getHumanChoice();
-//     console.log("Human Choice is :",HumanChoice)
-//     PlayRound(HumanChoice,ComputerChoice)
-// }
-
-// if(HumanScore === 3){
-//     console.log("Human Won")
-// }
-// else console.log("Computer Won")
 let HumanScore=0;
 let ComputerScore=0;
+
+const Humanele=document.querySelector(".HumanScore")
+const Compele=document.querySelector(".ComputerScore")
+const Scores=document.querySelector(".scores")
+let result;
+
+
 function PlayRound(HumanChoice){
     let ComputerChoice=getComputerChoice();
     console.log("Comp Choice is :",ComputerChoice)
 
+    if(HumanScore >= 3 || ComputerScore >= 3){
+        alert("Game has finished");
+    }
+    if(!document.querySelector(".scores p")){
+    result=document.createElement("p")
+    Scores.appendChild(result)
+    }
+    
     if (HumanChoice===ComputerChoice){
-        console.log("Ohh it was a draw")
+        result.textContent="It's a draw"
         return
     }
     else if(HumanChoice==="rock" && ComputerChoice === "scissor"){
         HumanScore++;
-        console.log("You Won Rock beats scissor")
+        Humanele.textContent="Human Score : "+ HumanScore
+        result.textContent="You won " + HumanChoice.replace(/^./i,"R") + " beats " + ComputerChoice  // Used regex to capitalize first letter 
     }
     else if(HumanChoice==="paper" && ComputerChoice === "rock"){
         HumanScore++;
-        console.log("You Won Paper beats Rock")
+        Humanele.textContent="Human Score : "+ HumanScore
+        result.textContent="You won " + HumanChoice + " beats " + ComputerChoice
     }
     else if(HumanChoice==="scissor" && ComputerChoice==="paper"){
         HumanScore++;
-        console.log("You Won Scissor beats Paper")
+        Humanele.textContent="Human Score : "+ HumanScore
+        result.textContent="You won " + HumanChoice + " beats " + ComputerChoice
     }
     else{ 
         ComputerScore++;
-        console.log("You Lose",ComputerChoice," beats ",HumanChoice)
+        Compele.textContent="Computer Score : "+ ComputerScore
+        result.textContent="Computer Won " + ComputerChoice + " beats " + HumanChoice
     }
 
     if(HumanScore === 3){
-        alert("Game Over")
-        console.log("Human Won")
+        result.textContent="You won the game " 
+        return
     }
     else if (ComputerScore==3) {
-        console.log("Computer Won")
-        alert("Game Over");
+        result.textContent="Computer won the game "
+        return
     }
     else
     return;
