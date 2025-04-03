@@ -23,8 +23,11 @@ body {
     height: 500px;
     width: 650px;
     border-radius: 10px;
-    border: 5px solid black;
+    outline: 5px solid black;
     background-color: white;
+    display: flex;
+    flex-wrap: wrap;  /* The added divs will be wrapped */
+    /* overflow: hidden; */
 }
 
 .menus {
@@ -42,5 +45,10 @@ button {
     width: 100px;
     font-size: large;
     font-weight: 600;
+}
+
+.newdiv {
+    /* box-sizing: border-box; */
+    outline: 1px solid black;
 }
 
