@@ -24,13 +24,12 @@ function addListener(){
 
     if(!color)
     for(const divs of newdivsArray){
-    divs.addEventListener("mouseover",coluring)
+        divs.onmouseover=coluring     // Purposely used divs.onmouseover instead of addEventListener because only one event handler will be there i.e no need to remove event handlers when switching between rainbow and black
     }
     else 
     
     for(const divs of newdivsArray){
-    divs.removeEventListener("mouseover",coluring)
-    divs.addEventListener("mouseover",rainbowcolour)
+        divs.onmouseover=rainbowcolour
     }
 }
 
@@ -44,7 +43,12 @@ function rainbowcolour(e){
 }
 
 function coluring(event) {
+    let currentOpacity = parseFloat(event.target.style.opacity) || 0;
+    if (currentOpacity < 1) {
+        currentOpacity += 0.1;
+    }
     event.target.style.backgroundColor ="black";
+    event.target.style.opacity=currentOpacity;
 }
 
 function editgrid(){
