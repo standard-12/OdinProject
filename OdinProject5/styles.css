@@ -25,10 +25,18 @@ body {
     margin-bottom: 20px;
     border: 3px solid white;
     background-color: rgb(33, 32, 32);
+    text-align: right;
+    height: 100px;
+    box-sizing: border-box; /* The height of the div was increasing when i give padding now it doesnt */
+    padding: 27px 4px;
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
 }
 
+
 .keypad {
-    flex: 4;
+    height: 378px;
     display: flex;
     flex-direction: column;
 
@@ -61,5 +69,6 @@ body {
    font-size: 13.333px !important; /* I want to override the material-icons default value */
    /* I could switch the link tags of material-icons and this file so that this will load later or i can use !important" */
 }
+
 
 
