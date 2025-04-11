@@ -7,6 +7,8 @@ let result = 0
 let presentoperator=''
 let equalbtn_flag =false
 
+document.addEventListener("keydown",keyboard)
+
 const signbtn=document.querySelector(".sign")
 signbtn.addEventListener("click",signbtnpressed)
 
@@ -43,11 +45,12 @@ function numbtnpress(e) {
 function operatorbtnpress(e){
     let prev_operator=presentoperator
     presentoperator=e.target.value
-    
+
     if(input_flag===false)  // When the operator is pressed before giving input 
     {
      return                     
     }
+
     if(operator_flag=== false){
         operand1=input_temp
         readyfornextinput()
@@ -120,6 +123,34 @@ function signbtnpressed() {
         display(input_temp)
     }
 }
+
+function keyboard(e){
+        let operators=['+','-','*','/','%']
+        let newobj = {
+            target : {
+                value: e.key
+            }
+        }
+        if(+e.key>=0 && +e.key<=9){
+            numbtnpress(newobj)
+        }
+        else if(operators.includes(e.key)){
+            operatorbtnpress(newobj)
+        }
+        else {
+            switch (e.key){
+                case "Backspace":
+                    crossbtnpressed(newobj)
+                    break;
+                case "=":
+                    equalbtnpressed()
+                    break;
+                case "Enter":
+                    equalbtnpressed()
+                    break;
+            }
+        }
+    }
 
 // function operatorbtnpress(e){
 //     if(input_flag===false)  // When the operator is pressed before giving input 
