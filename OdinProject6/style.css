@@ -1,0 +1,135 @@
+:root {
+    --form-field-invalid-color: red;
+    --form-field-invalid-border:red;
+    --theme-color: #596D48;
+
+}
+
+@font-face {
+    font-family: customfont;
+    src: url(./assets/Norse-Bold.otf);
+}
+
+body,input,div,label,h1,fieldset,p,h3 {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    display: flex;
+}
+
+.sidebar {
+    background-image: url(./assets/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 40vw;
+    position: relative;
+}
+
+.sidebar > div {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: black;
+    opacity: 0.6;
+    color: white;
+    box-sizing: border-box;
+    padding: 5px 0px;
+}
+
+h1 {
+    font-family: customfont;
+    font-size: 5rem;
+    padding-top: 5px;
+}
+
+.sidebar > p {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    color: white;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.sidebar > p > span {
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+.sidebar img {
+    height: 90%;
+    width: 100px;
+}
+
+.main {
+    box-sizing: border-box;
+    width: 60vw;
+    height: 100vh;
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+.main > p {
+    width: 85%;
+    padding:0px 20px;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.main > p:last-child {
+    font-size: 1rem;
+}
+
+button, h3 {
+    margin-left: 20px;
+}
+
+fieldset {
+    box-sizing: border-box;
+    width: 100%;
+    height: 250px;
+    padding: 20px 0px;
+}
+
+fieldset > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 700px;
+    margin-left: 20px;
+
+}
+
+label {
+    display: block;
+    width: 250px; 
+    font-size: 0.8rem;
+}
+
+input {
+     width: 250px;
+}
+
+button {
+    width: 250px;
+    height: 50px;
+    background-color: var(--theme-color);
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    color: white;
+}
