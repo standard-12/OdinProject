@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Savate:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Library</title>
+</head>
+
+<body>
+    <div class="heading"><h1>Library</h1></div>
+    <div class="main">
+    </div>
+    <div class="sidebar">
+        <dialog closedby="none">
+            <h3>Book Details<span> &#10006;</span></h3>
+            <form action="" method="dialog">
+                <p>
+                    <label for="name">Title :</label>
+                    <input type="text" id="name" name="name" required autofocus maxlength="15" placeholder="Book Title" >
+                </p>
+                <p>
+                    <label for="author">Author :</label>
+                    <input type="text" id="author" name="author" required maxlength="15" placeholder="Author's Name">
+                </p>
+                <p>
+                    <label for="pages">Pages :</label>
+                    <input type="number" id="pages" name="pages" placeholder="No of pages" max="5000">
+                </p>
+                <p>
+                    <label for="price">Price :</label>
+                    <input type="tel" id="price" step="0.01" placeholder="0.00" name="price" max="100000" pattern="[0-9]+">
+                </p>
+            </form>
+            <button type="button" class="dialogbtn">Add</button>
+        </dialog>
+        <div class="sidebar-btns">
+            <button class="addbtn">Add a book</button>
+            <button>Remove a book</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+
+:root.light {
+    --theme-colour : white;
+    --theme-button : rgb(28, 145, 255);
+    --main-bg : rgb(236, 187, 187);
+    --side-bg : rgb(198, 248, 117);
+    --heading-bg : linear-gradient(rgb(243, 231, 9), rgb(243, 240, 65));
+}
+
+body {
+    margin: 0px;
+}
+
+body {
+    background-image: url(./assets/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+
+    font-family: "Savate", sans-serif;
+}
+
+.heading {
+    /* position: -webkit-sticky;
+    position: sticky;
+    top: 0px;      */
+    background-image: var(--heading-bg);
+    line-height: 80px;
+    height: 80px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.heading h1 {
+    margin: 0px;
+}
+
+.main {
+    /* background-color: var(--main-bg); */
+    width: 80%;
+    height: 649px;
+    display: grid;
+    grid-template-columns: repeat(3,calc( (100% - 40px) / 3));
+    grid-template-rows: repeat(2,calc( (649px - 20px) / 2));
+    grid-auto-rows: calc( (649px - 20px) / 2);
+    grid-auto-columns:calc( (100% - 40px) / 3) ;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.sidebar {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+
+    width: 20%;
+    height: 100%;
+
+    background-color: var(--side-bg);
+    opacity: 0.5;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+
+    z-index: 0;
+}
+
+.sidebar-btns {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sidebar button {
+    width: 90%;
+    height: 35px;
+    border-radius: 10px;
+    background-color: var(--theme-button);
+    font-family: inherit;
+    font-weight: bold ;
+}
+
+.cards {
+    width: 75%;
+    height: 95%;
+    background-color: blanchedalmond;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.cards > h3 {
+    background-color: rgb(226, 226, 21);
+    height: 40px;
+    line-height: 40px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.cards button {
+    font-family: inherit;
+    background-color: rgb(226, 226, 21);
+    height: 30px;
+    width: 80px;
+}
+
+dialog {
+    width: 500px;
+    height: 350px;
+    padding: 0px;
+}
+
+dialog label {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+}
+
+dialog input {
+    font-family: inherit;
+    height: 30px;
+    width: 200px;
+}
+
+
+dialog > h3 {
+    position: relative;
+    margin: 0px;
+    background-color: rgb(226, 226, 21);
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+dialog span {
+    position: absolute;
+    right: 10px;
+}
+
+dialog span:hover, .sidebar button:hover {
+    cursor: pointer;
+}
+
+.sidebar dialog  button {
+    margin-left: 150px;
+    width: 200px;
+    border-radius: 10px;
+    font-family: inherit;
+    background-color: rgb(226, 226, 21);
+} 
+
+dialog::backdrop {
+  background-image: linear-gradient(
+    45deg,
+    magenta,
+    rebeccapurple,
+    dodgerblue,
+    green
+  );
+  opacity: 0.75;
+}
