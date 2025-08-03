@@ -1,0 +1,94 @@
+body {
+    background-color: black;
+    margin: 0px;
+}
+
+h2 {
+    background-color: yellowgreen ;
+    font-size: 32px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-bottom: 3px solid black;
+    width: 100%;
+    height: 55px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    line-height: 55px;
+}
+
+.scores {
+    background-color: rgb(36, 31, 31);
+    color: white;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 500px;
+    height: 100px;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 50px;
+    border: 2px solid white;
+}
+
+.scores >div {
+    height: 50px;
+} 
+.scores p {
+    margin: 0px;
+    padding: 0px;
+    width: 25%;
+    border: 2px solid white;
+}
+.scores .red {
+    background-color: red;
+}
+
+.scores .blue {
+    background-color: rgb(53, 175, 215);
+}
+
+.scores div:last-child {
+    display: flex;
+}
+
+.board {
+    width: 500px;
+    height: 500px;
+    margin: 0px auto;
+    padding: 0px;
+    border: 8px solid white;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+.board div {
+    color: white;
+    outline: 4px solid white;
+    font-size: 75px;
+    display: flex;
+    align-items: center;      /* vertical centering */
+    justify-content: center;  /* horizontal centering */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: greenyellow;
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    width: 150px;
+    height: 100px;
+}
+
+.buttons button {
+    background-color: yellow;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 120px;
+    height: 30px;
+    border-radius: 20px;
+}
