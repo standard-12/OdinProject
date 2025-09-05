@@ -1,0 +1,18 @@
+header>h2 {
+    margin: 0px;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 32px;
+}
+
+header>nav{
+    display: flex;
+    justify-content: space-around;
+}
+
+nav>button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+}
